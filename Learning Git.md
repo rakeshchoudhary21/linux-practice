@@ -1,0 +1,55 @@
+# Learning Git
+1- To create an empty git repo
+    git init
+2- to stage files for git to track
+    git add -A # for all files, or git add *.txt # for adding only text files
+3- to commit stuff
+    git commit -m 'message for commit'
+4- to add remote repository
+    git remote add origin https://github.com/rakeshchoudhary21/linux-practice.git
+5- to push your changes
+    git push origin <branch name>
+6- to create a new branch
+    git checkout -b my_new_branch
+7- to see man page of git.
+    git help <name of git command>
+8- to see log of git activity
+    git log
+9- to see diff of a file from last commit(shows only for tracked files)
+    git diff file_name
+10- Say you make change to a file that is already committed. Now you have 2 options, commit the update or discard,
+    to discard the change use checkout
+    git checkout name_of_updated_file
+11- Adding user name and commit email
+    git config --global user.name 'my name'
+    git config --global user.email 'my email address'
+12- you can call merge to merge a branch into another branch
+    call merge from branch to which you want to merge, then add name of branch from which you want to merge
+    git checkout master
+    git merge some_branch_into_master
+13- In case of conflict during git merge, the branch goes into a limbo, now you have two options, either abort the merge or resolve
+    the conflict and then do git commit
+
+14- git remote shows ur current remote. We will generally add more remotes, since we generally fork from actual branches and then
+    go for the git merge. So we will need 2 remotes, one that points to our own git fork, and other that points to org remote.
+15- git push (without any args here will push local changes to current remote and current git branch)
+    git push my-remote my-branch
+
+16- Md files-- MarkDown is a markup language just like HTML. They decorate(mark) written text.
+    Mark down tricks::
+    # Single hash is large heading
+    ## smaller heading.
+    **my_text** two stars around text make it BOLD
+    *italics* single star makes it italics
+    - single dash is for making dot based bullet points
+    `some code` makes things appear like a code...
+    use triple quote for making code blocks
+    ```
+    psvm(String[] args){
+        sout("its here for some reason");
+    }
+    ```
+
+    Adding links::
+    [My link to something](https://google.com)
+    ![Linke to some image](Image file link)
